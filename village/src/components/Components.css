@@ -1,0 +1,27 @@
+.Smurf {
+    border: 1px solid black;
+    width: 200px;
+}
+
+.Smurfs ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.SmurfForm form {
+    display:  flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 30px auto;
+}
+
+input {
+    margin-bottom: 10px;
+    height: 30px;
+}
+
+button {
+    width: 200px;
+    height: 25px;
+    margin: 0 auto;
+}
