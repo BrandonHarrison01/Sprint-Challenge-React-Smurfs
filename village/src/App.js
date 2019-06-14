@@ -36,6 +36,16 @@ class App extends Component {
       .catch(err => console.log(err))
   }
 
+  deleteSmurf = (e, smurf) => {
+    e.preventDefault();
+    axios
+      .delete(`http://localhost:3333/smurfs/${smurf.id}`)
+      .then(res => {
+        this.setState({ smurfs: res.data})
+      })
+      .catch(err => console.log(err))
+  }
+
   render() {
     return (
       <div className="App">
@@ -43,7 +53,7 @@ class App extends Component {
           <NavLink className='link' activeClassName='active-link' exact to='/'>See Smurfs</NavLink>
           <NavLink className='link' activeClassName='active-link' to='/smurf-form'>Add a Smurf</NavLink>
         </nav>
-        <Route exact path='/' render={props =>  <Smurfs smurfs={this.state.smurfs} /> } />
+        <Route exact path='/' render={props =>  <Smurfs smurfs={this.state.smurfs} deleteSmurf={this.deleteSmurf} /> } />
         <Route path='/smurf-form' render={props => <SmurfForm newSmurf={this.newSmurf} /> } />
       </div>
     );
