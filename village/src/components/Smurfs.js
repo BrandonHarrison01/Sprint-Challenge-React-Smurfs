@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Components.css';
 
 import Smurf from './Smurf';
 
@@ -10,13 +11,16 @@ class Smurfs extends Component {
         <ul>
           {this.props.smurfs.map(smurf => {
             return (
-              <Smurf
-                name={smurf.name}
-                id={smurf.id}
-                age={smurf.age}
-                height={smurf.height}
-                key={smurf.id}
-              />
+              <div>
+                <Smurf
+                  name={smurf.name}
+                  id={smurf.id}
+                  age={smurf.age}
+                  height={smurf.height}
+                  key={smurf.id}
+                />
+                <button className='delete-btn' onClick={e => this.props.deleteSmurf(e, smurf)}>Delete Smurf</button>
+              </div>
             );
           })}
         </ul>

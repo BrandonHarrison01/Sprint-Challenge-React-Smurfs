@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
+import './Components.css';
 
 class SmurfForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: '',
-      age: '',
-      height: ''
+        name: '',
+        age: '',
+        height: ''
     };
   }
 
   addSmurf = event => {
     event.preventDefault();
     // add code to create the smurf using the api
+    this.props.newSmurf(this.state);
 
     this.setState({
       name: '',
@@ -47,7 +49,7 @@ class SmurfForm extends Component {
             value={this.state.height}
             name="height"
           />
-          <button type="submit">Add to the village</button>
+          <button className='add-smurf' type="submit">Add to the village</button>
         </form>
       </div>
     );
