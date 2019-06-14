@@ -11,9 +11,9 @@ nav {
   text-decoration: none;
   padding: 10px;
   font-size: 1.2rem;
-  color: gray;
+  color: lightgray;
 }
 
 .active-link {
-  color: lightgray;
+  color: gray;
 }

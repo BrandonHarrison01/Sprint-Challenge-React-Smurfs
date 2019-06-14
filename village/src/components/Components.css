@@ -1,5 +1,6 @@
 .Smurf {
     border: 1px solid black;
+    border-radius: 5px;
     width: 200px;
 }
 
@@ -18,10 +19,22 @@
 input {
     margin-bottom: 10px;
     height: 30px;
+    padding: 5px;
 }
 
-button {
+.add-smurf {
     width: 200px;
     height: 25px;
     margin: 0 auto;
+}
+
+.delete-btn {
+    width: 180px;
+    height: 30px;
+    background-color: rgba(255, 0, 0, 0.568);
+    border-radius: 10px;
+}
+
+.delete-btn:hover {
+    background-color: rgba(255, 0, 0, 0.795);
 }

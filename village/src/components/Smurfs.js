@@ -19,7 +19,7 @@ class Smurfs extends Component {
                   height={smurf.height}
                   key={smurf.id}
                 />
-                <button onClick={e => this.props.deleteSmurf(e, smurf)}>Delete Smurf</button>
+                <button className='delete-btn' onClick={e => this.props.deleteSmurf(e, smurf)}>Delete Smurf</button>
               </div>
             );
           })}
